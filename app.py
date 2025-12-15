@@ -2,8 +2,8 @@ import pandas as pd
 import joblib
 import streamlit as st
 
-model = joblib.load("sales_model.pkl")
-encoder = joblib.load("sales_encoder.pkl")
+model = joblib.load('sales_model.pkl')
+encoder = joblib.load('sales_encoder.pkl')
 
 st.title("Product Recommendation")
 
@@ -32,3 +32,4 @@ if st.button("Recommend"):
     make_recommendation = model.predict(converted)
 
     st.success(f"Recommended product: {make_recommendation}")
+
